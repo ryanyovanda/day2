@@ -1,11 +1,11 @@
-import java.lang.module.Configuration;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        temp tempObject = new temp ();
-        tempObject.Converter();
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter temperature in Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+        double celsius = (fahrenheit - 32) * 5 / 9;
+        System.out.println("Temperature in Celsius: " + celsius);
+        scanner.close();
     }
-    }
+}
